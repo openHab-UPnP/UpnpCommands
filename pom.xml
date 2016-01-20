@@ -52,7 +52,7 @@ limitations under the License.
 	<dependency>
 		<groupId>org.apache.felix</groupId>
 		<artifactId>org.apache.felix.gogo.runtime</artifactId>
-		<version>0.16.2</version>
+		<version>0.8.0</version>
 	</dependency>
 
   </dependencies>

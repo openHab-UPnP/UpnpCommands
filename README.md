@@ -11,6 +11,7 @@ mvn clean install
 ```
 
 ## Run
+### With Apache Felix
 Install the [Apache Felix framework](http://felix.apache.org/downloads.cgi)
 
 ```shell
@@ -38,7 +39,47 @@ help
 upnp:devices
 upnp:subscribe uuid:XXXXXX urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar
 upnp:unsubscribe uuid:XXXXXX urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar
+
+upnp:dsc
+upnp:av
+upnp:igd
 ```
+
+### With OpenHAB
+Install [OpenHAB](http://www.openhab.org/getting-started/downloads.html) (1.8.0)
+
+```shell
+cd ..
+cd distribution-1.8.0-runtime
+./start.sh
+```
+
+In the OpenHAB Gogo Shell
+```
+install -start http://apache.mirrors.ovh.net/ftp.apache.org/dist//felix/org.osgi.compendium-1.4.0.jar
+install -start http://apache.mirrors.ovh.net/ftp.apache.org/dist//felix/org.apache.felix.log-1.0.1.jar
+install -start http://apache.mirrors.ovh.net/ftp.apache.org/dist//felix/org.apache.felix.upnp.extra-0.4.0.jar
+install -start http://apache.mirrors.ovh.net/ftp.apache.org/dist//felix/org.apache.felix.upnp.basedriver-0.8.0.jar
+install -start http://apache.mirrors.ovh.net/ftp.apache.org/dist//felix/org.apache.felix.upnp.tester-0.4.0.jar
+
+install -start http://apache.mirrors.ovh.net/ftp.apache.org/dist//felix/org.apache.felix.ipojo-1.12.1.jar
+install -start http://apache.mirrors.ovh.net/ftp.apache.org/dist//felix/org.apache.felix.ipojo.api-1.12.1.jar
+install -start file:///../upnp.cmd/target/upnp.cmd-0.1.0.jar
+
+lb
+
+help
+
+upnp:devices
+upnp:subscribe uuid:XXXXXX urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar
+upnp:unsubscribe uuid:XXXXXX urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar
+
+upnp:dsc
+upnp:av
+upnp:igd
+
+```
+Remark: Bundles installations are not persistent from one session to another. You should copy/wget the bundles jarfiles in the ./addons directory.
 
 ## Todolist
 Extra commands for:
