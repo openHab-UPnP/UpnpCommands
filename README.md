@@ -1,7 +1,6 @@
 # UPnP Cmd
 
 A simply Gogo shell command for inspecting UPnP devices
- 
 
 ## Build
 git clone 
@@ -37,6 +36,15 @@ upnp:devices
 upnp:subscribe uuid:XXXXXX urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar
 upnp:unsubscribe uuid:XXXXXX urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar
 ```
+
+## Todolist
+Extra commands for:
+* [http://upnp.org/specs/av/av4/ Audio-Video (AV)]
+* [http://upnp.org/specs/ha/digitalsecuritycamera/ Digital Security Camera (DSC)]
+* [http://upnp.org/specs/gw/igd2/ Internet Gateway Device (IGD)]
+
+## Ressources
+* [https://osgi.org/javadoc/r4v42/org/osgi/service/upnp/package-summary.html Javadoc OSGi UPnP Driver]
 
 ## License
 

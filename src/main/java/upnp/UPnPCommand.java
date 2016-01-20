@@ -49,7 +49,7 @@ public class UPnPCommand
 	@Context
 	private BundleContext bundleContext;
 
-	@Requires(optional=true)
+	@Requires(optional = true)
 	private UPnPDevice[] m_upnpdevices;
 
 	@ServiceProperty(name = "osgi.command.scope", value = "upnp")
@@ -58,7 +58,7 @@ public class UPnPCommand
 	@ServiceProperty(name = "osgi.command.function", value = "{}")
 	String[] function = new String[]
 	{ "devices", "services", "statevariables", "actions", "subscribe",
-			"unsubscribe" };
+			"unsubscribe", "igd", "dsc", "av" };
 
 	@Descriptor("devices")
 	public void devices()
@@ -126,6 +126,24 @@ public class UPnPCommand
 
 	@Descriptor("actions")
 	public void actions(String deviceId, String serviceId)
+	{
+		System.out.println("NOT IMPLEMENTED !");
+	}
+
+	@Descriptor("igd")
+	public void igd()
+	{
+		System.out.println("NOT IMPLEMENTED !");
+	}
+
+	@Descriptor("av")
+	public void av()
+	{
+		System.out.println("NOT IMPLEMENTED !");
+	}
+
+	@Descriptor("dsc")
+	public void dsc()
 	{
 		System.out.println("NOT IMPLEMENTED !");
 	}
