@@ -3,9 +3,12 @@
 A simply Gogo shell command for inspecting UPnP devices
 
 ## Build
-git clone 
+Install Java and Maven 3
+```shell
+git clone https://github.com/osgistuff/upnp.cmd.git
 cd upnp.cmd
 mvn clean install
+```
 
 ## Run
 Install the [Apache Felix framework](http://felix.apache.org/downloads.cgi)
@@ -39,9 +42,9 @@ upnp:unsubscribe uuid:XXXXXX urn:microsoft.com:serviceId:X_MS_MediaReceiverRegis
 
 ## Todolist
 Extra commands for:
-* [http://upnp.org/specs/av/av4/ Audio-Video (AV)]
-* [http://upnp.org/specs/ha/digitalsecuritycamera/ Digital Security Camera (DSC)]
-* [http://upnp.org/specs/gw/igd2/ Internet Gateway Device (IGD)]
+* [Audio-Video (AV)](http://upnp.org/specs/av/av4/ )
+* [Digital Security Camera (DSC)](http://upnp.org/specs/ha/digitalsecuritycamera/)
+* [Internet Gateway Device (IGD)](http://upnp.org/specs/gw/igd2/)
 
 ## Ressources
 * [https://osgi.org/javadoc/r4v42/org/osgi/service/upnp/package-summary.html Javadoc OSGi UPnP Driver]
